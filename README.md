@@ -45,3 +45,11 @@ This is a Machine Learning-based web application that predicts the risk level (S
 └── /templates             # HTML templates (index, result)
 
 
+🤝 Contribution
+
+Feel free to fork, use, or improve this project to promote women's safety. Star ⭐ the repo if you like it!
+
+                                                                                                        Pravalika Singarapu
+                                                                                                        
+
+
