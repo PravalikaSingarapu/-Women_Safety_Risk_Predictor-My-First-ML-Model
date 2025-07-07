@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .result-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        h2 { text-align: center; }
+        .tip, .actions-section {
+            background-color: #d1ecf1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .actions-section {
+            background-color: #ffcccc; /* light red for danger */
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>🔎 Risk Level: {{ risk }}</h2>
+        <div class="tip"><strong>Tip:</strong> {{ tip }}</div>
+        <div class="actions-section">
+            <h4>Next Steps:</h4>
+            <ul>
+                {% for action in actions %}
+                    <li>{{ action }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="/">← Back to Check Another</a>
+    </div>
+</body>
+</html>

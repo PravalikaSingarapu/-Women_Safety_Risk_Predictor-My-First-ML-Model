@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Women Safety Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        .header {
+            text-align: center;
+        }
+        button {
+            background-color: #6c757d;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Women Safety Risk Check</h2>
+        </div>
+        <form method="POST" action="/predict">
+            <label>Time of Day:</label>
+            <select name="time_of_day" required>
+                <option value="Day">Day</option>
+                <option value="Evening">Evening</option>
+                <option value="Night">Night</option>
+            </select><br><br>
+
+            <label>Location Type:</label>
+            <select name="location_type" required>
+                <option>Home</option>
+                <option>Street</option>
+                <option>Market</option>
+                <option>Park</option>
+                <option>Bus Stop</option>
+                <option>Alley</option>
+                <option>Station</option>
+            </select><br><br>
+
+            <label>Crowd Density:</label>
+            <select name="crowd_density" required>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select><br><br>
+
+            <label>Are you alone?</label>
+            <select name="is_alone" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+
+            <label>Battery Level (%):</label>
+            <input type="number" name="battery_level" min="0" max="100" required><br><br>
+
+            <label>How do you feel?</label>
+            <textarea name="mood_text" rows="4" required></textarea><br><br>
+
+            <button type="submit">Check Risk Level</button>
+        </form>
+    </div>
+</body>
+</html>
